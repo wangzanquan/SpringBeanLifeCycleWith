@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
@@ -14,8 +15,8 @@ public class MailService {
 	/*
 	 * This class is the example of Spring bean life cycle using Java Annotations 
 	 */
-	public MailService(Map<String, String> map) {
-		this.map = map;
+	public MailService() {
+		map = new HashMap<>();
 	}
 	
 	public void send(String mailTo) {
